@@ -612,6 +612,218 @@ body{
         </section>
 
     </main>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+
+<!-- Evitar selección de texto -->
+<style>
+    body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+
+</head>
+<body>
+
+
+<script>
+// ===========================
+// 1. DESACTIVAR CLICK DERECHO
+// ===========================
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+
+// ===========================
+// 2. DESACTIVAR TECLAS DE INSPECTOR
+// ===========================
+document.onkeydown = function(e) {
+    if (e.keyCode === 123) return false;        // F12
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) return false; // CTRL+SHIFT+I
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) return false; // CTRL+SHIFT+J
+    if (e.ctrlKey && e.keyCode === 85) return false; // CTRL+U
+};
+
+// ===========================
+// 3. DESACTIVAR ARRASTRAR CONTENIDO
+// ===========================
+document.addEventListener("dragstart", function(e){
+    e.preventDefault();
+});
+
+// ===========================
+// 4. DESACTIVAR SELECCIÓN DE TEXTO JS EXTRA
+// ===========================
+document.onselectstart = function() { return false; }
+
+// ===========================
+// 5. OCULTAR CODIGO HTML OFUSCANDOLO (NIVEL BÁSICO)
+// ===========================
+(function(){
+    const html = document.documentElement.innerHTML;
+    const encoded = btoa(unescape(encodeURIComponent(html)));
+    console.log("Código protegido (Base64):", encoded);
+})();
+</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legend Cycling</title>
+
+
+
+ 
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#000;color:white;font-family:'Poppins',sans-serif;overflow-x:hidden;}
+
+/* HEADER */
+header{position:;width: 100%;top:0;left:0;z-index:1000;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.35);backdrop-filter:blur(10px);}
+.logo{font-size:28px;font-family:'Orbitron',sans-serif;font-weight:bold;color:#fff;}
+.logo span{color:red;}
+nav a{color:white;text-decoration:none;margin-left:25px;font-size:15px;transition:0.3s;}
+nav a:hover{color:red;}
+
+/* HERO */
+.hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
+.hero video{position:absolute;width:100%;height:100%;object-fit:cover;top:0;left:0;}
+/* Overlay más suave */
+.overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.15);} 
+.hero-content{position:relative;z-index:2;max-width:900px;padding:20px;}
+.hero-content h1{font-size:75px;font-family:'Orbitron',sans-serif;text-transform:uppercase;margin-bottom:20px;animation:fadeUp 1s ease;}
+.hero-content p{font-size:20px;color:#ddd;margin-bottom:30px;animation:fadeUp 1.5s ease;}
+.btn{display:inline-block;padding:15px 40px;background:red;color:white;text-decoration:none;border-radius:40px;transition:0.3s;font-weight:bold;}
+.btn:hover{background:white;color:black;}
+
+/* SECTION */
+.section{padding:100px 7%;}
+.title{font-size:45px;margin-bottom:60px;font-family:'Orbitron',sans-serif;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+.card{background:#111;border-radius:20px;overflow:hidden;transition:0.4s;border:1px solid #222;}
+.card:hover{transform:translateY(-10px);box-shadow:0 0 30px rgba(255,0,0,0.4);}
+.card img{width:100%;height:300px;object-fit:cover;}
+.card-content{padding:25px;}
+.card-content h3{margin-bottom:15px;font-size:24px;}
+.card-content p{color:#bbb;line-height:1.6;}
+
+/* STATS */
+.stats{background:#050505;padding:100px 7%;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:center;}
+.stat-box{padding:40px 20px;border:1px solid #222;border-radius:20px;background:#111;}
+.stat-box h2{font-size:55px;color:red;margin-bottom:10px;font-family:'Orbitron',sans-serif;}
+.stat-box p{color:#ccc;font-size:18px;}
+
+/* QUOTE */
+.quote{height:60vh;background:url('imagen1.jpeg') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;}
+/* Overlay más transparente */
+.quote::before{content:'';position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.25);} 
+.quote-content{position:relative;z-index:2;max-width:900px;padding:20px;}
+.quote-content h2{font-size:50px;font-family:';}
+.quote-content p{font-size:22px;color:#ddd;}
+
+/* FOOTER */
+footer{background:#000;padding:40px 7%;text-align:center;border-top:1px solid #111;}
+footer p{color:#777;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+
+@media(max-width:768px){
+.hero-content h1{font-size:42px;}
+.hero-content p{font-size:17px;}
+.title{font-size:32px;}
+nav{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo"><span></span></div>
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Historia</a>
+<a href="#">Carreras</a>
+<a href="#">Galería</a>
+<a href="#">Contacto</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-cycling-1567848857606?download=1080p" type="video/mp4">
+</video>
+<div class="overlay"></div>
+<div class="hero-content">
+<h1><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRFBUoefddIAkYIjwuLxqMe09mQuiXwQrUiSy_dofNyvh56IMZwEE2xQ9gbroOaU41gNTGr7a5tXsm9Nlztora7UnalEMiilBvqFATrKfZNIjhYsrUpDT9nJeUr-Q8wH6EdFli3_o9p-TIvaiOHu7dMZjvFM7N-Ep_e3mNZ19rmzV9jxuv-PbbcO0r9Fyq/s861/Proyecto%20Ciclismo%20.jpeg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="617" data-original-width="861" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRFBUoefddIAkYIjwuLxqMe09mQuiXwQrUiSy_dofNyvh56IMZwEE2xQ9gbroOaU41gNTGr7a5tXsm9Nlztora7UnalEMiilBvqFATrKfZNIjhYsrUpDT9nJeUr-Q8wH6EdFli3_o9p-TIvaiOHu7dMZjvFM7N-Ep_e3mNZ19rmzV9jxuv-PbbcO0r9Fyq/s320/Proyecto%20Ciclismo%20.jpeg"/></a></div></h1>
+<p>Velocidad, resistencia y espíritu en cada pedalada.</p>
+<a href="#" class="btn">Descubrir Más</a>
+</div>
+</section>
+
+<!-- HISTORIAS -->
+<section class="section">
+<h2 class="">Últimas Historias</h2>
+<div class="cards">
+<div class="card">
+  <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXl_EbXx-yKVZsnA8ONorhjimAaYBfpCpyYtDDzyC6vPkzVJgIcz-5lc8vCGgJ4vFwtOpmfUqB6m8nycO057yatBgVDKFdW4Qyy0Ijxp-YgRxqe_gaeqBewBu3L60Fz0by4VOEF-5aqrhNUEZKylGyuY0O3yQXM2RLj0VB9TkEG3u4h7W_8olrviebRLzA/s1080/Proyecto%20Pagina%20Erick%207.jpeg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="1009" data-original-width="1080" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXl_EbXx-yKVZsnA8ONorhjimAaYBfpCpyYtDDzyC6vPkzVJgIcz-5lc8vCGgJ4vFwtOpmfUqB6m8nycO057yatBgVDKFdW4Qyy0Ijxp-YgRxqe_gaeqBewBu3L60Fz0by4VOEF-5aqrhNUEZKylGyuY0O3yQXM2RLj0VB9TkEG3u4h7W_8olrviebRLzA/s320/Proyecto%20Pagina%20Erick%207.jpeg"/></a></div>
+<h3>El Inicio</h3><p>De entrenamientos locales a competencias nacionales.</p></div>
+  
+</div>
+<div class="card">
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj17GLzruwzpKskUxo7eKqp72VOkaT6rMZjn3Qqj56PeqT_7-pJ5OqqQpx_WRf6OZfZeGZSnl8n9PR2EB-ssTb5jXsKyY1anMLQTrZBKtHCYiEkYpVn3n7lTrHOx05oKAOMbJ3mQA93PgQP8-CnVWfIir_cTEJdW0mTbGuLUiRFvkB2UGWYvjEUG_UTFej6/s1080/Proyecto%20Pagina%20Erick%201%20.jpeg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="1080" data-original-width="1080" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj17GLzruwzpKskUxo7eKqp72VOkaT6rMZjn3Qqj56PeqT_7-pJ5OqqQpx_WRf6OZfZeGZSnl8n9PR2EB-ssTb5jXsKyY1anMLQTrZBKtHCYiEkYpVn3n7lTrHOx05oKAOMbJ3mQA93PgQP8-CnVWfIir_cTEJdW0mTbGuLUiRFvkB2UGWYvjEUG_UTFej6/s320/Proyecto%20Pagina%20Erick%201%20.jpeg"/></a></div>
+<div class="card-content"><h3>Momentos Épicos</h3><p>Victorias inolvidables.</p></div>
+</div>
+<div class="card">
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0kG-88cRq530RKcc6gzamPYaukHsXcBt3_6Qcv4OcHBJt3sAGFR6ymML6uV8lUO5-PO3H4lDgiBQ2CIpCprf5bY1w48nO6KbLvEBF8LrWRbuBztEMvg8oBU6O32oP5NEYXBa5J1E1SXIQ6s4VJ1wmiiXnilFKuIm_uN_Gs2PxxszHsIlc5YWjhC4xovm6/s960/Proyecto%20Pagina%20Erick%202.jpeg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="320" data-original-height="960" data-original-width="540" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0kG-88cRq530RKcc6gzamPYaukHsXcBt3_6Qcv4OcHBJt3sAGFR6ymML6uV8lUO5-PO3H4lDgiBQ2CIpCprf5bY1w48nO6KbLvEBF8LrWRbuBztEMvg8oBU6O32oP5NEYXBa5J1E1SXIQ6s4VJ1wmiiXnilFKuIm_uN_Gs2PxxszHsIlc5YWjhC4xovm6/s320/Proyecto%20Pagina%20Erick%202.jpeg"/></a></div>
+<h3>Espíritu de Equipo</h3><p>La camaradería que impulsa cada kilómetro.</p></div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+<h2 class="title">Logros</h2>
+<div class="stats-grid">
+<div class="stat-box"><h2>69</h2><p>Competencias</p></div>
+<div class="stat-box"><h2>9</h2><p>Victorias</p></div>
+<div class="stat-box"><h2>3</h2><p>Podios</p></div>
+<div class="stat-box"><h2>7</h2><p>Títulos Nacionales</p></div>
+</div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote">
+<div class="quote-content">
+<h2>"Cada pedalada cuenta"</h2>
+<p>El ciclismo es esfuerzo, pasión y superación constante.</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Legend Cycling — Inspirado en la pasión del ciclismo.</p>
+</footer>
+
+
 
 
     <!-- =========================
