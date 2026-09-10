@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Legend Cycling</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Protección básica -->
+    <script>
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener("keydown", function(e) {
+
+            if (e.key === "F12") {
+                e.preventDefault();
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === "I") {
+                e.preventDefault();
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key === "J") {
+                e.preventDefault();
+            }
+
+            if (e.ctrlKey && e.key === "U") {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener("dragstart", function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener("selectstart", function(e) {
+            e.preventDefault();
+        });
+
+        console.log(
+            btoa(document.documentElement.innerHTML)
+        );
+    </script>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <span>Legend</span> Cycling
+        </div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Historia</a>
+            <a href="#">Carreras</a>
+            <a href="#">Galería</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <video autoplay muted loop playsinline>
+            <source
+                src="https://cdn.coverr.co/videos/coverr-cycling-1567848857606?download=1080p"
+                type="video/mp4">
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-logo">
+
+                <a
+                    href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRFBUoefddIAkYIjwuLxqMe09mQuiXwQrUiSy_dofNyvh56IMZwEE2xQ9gbroOaU41gNTGr7a5tXsm9Nlztora7UnalEMiilBvqFATrKfZNIjhYsrUpDT9nJeUr-Q8wH6EdFli3_o9p-TIvaiOHu7dMZjvFM7N-Ep_e3mNZ19rmzV9jxuv-PbbcO0r9Fyq/s861/Proyecto%20Ciclismo%20.jpeg"
+                    target="_blank"
+                >
+
+                    <img
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRFBUoefddIAkYIjwuLxqMe09mQuiXwQrUiSy_dofNyvh56IMZwEE2xQ9gbroOaU41gNTGr7a5tXsm9Nlztora7UnalEMiilBvqFATrKfZNIjhYsrUpDT9nJeUr-Q8wH6EdFli3_o9p-TIvaiOHu7dMZjvFM7N-Ep_e3mNZ19rmzV9jxuv-PbbcO0r9Fyq/s320/Proyecto%20Ciclismo%20.jpeg"
+                        alt="Legend Cycling"
+                    >
+
+                </a>
+
+            </div>
+
+            <p>
+                Velocidad, resistencia y espíritu en cada pedalada.
+            </p>
+
+            <a href="#" class="btn">
+                Descubrir Más
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HISTORIAS ================= -->
+
+    <section class="section">
+
+        <h2 class="title">
+            Últimas Historias
+        </h2>
+
+        <div class="cards">
+
+
+            <!-- CARD 1 -->
+
+            <div class="card">
+
+                <img
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXl_EbXx-yKVZsnA8ONorhjimAaYBfpCpyYtDDzyC6vPkzVJgIcz-5lc8vCGgJ4vFwtOpmfUqB6m8nycO057yatBgVDKFdW4Qyy0Ijxp-YgRxqe_gaeqBewBu3L60Fz0by4VOEF-5aqrhNUEZKylGyuY0O3yQXM2RLj0VB9TkEG3u4h7W_8olrviebRLzA/s320/Proyecto%20Pagina%20Erick%207.jpeg"
+                    alt="El Inicio"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        El Inicio
+                    </h3>
+
+                    <p>
+                        De entrenamientos locales a competencias nacionales.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card">
+
+                <img
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj17GLzruwzpKskUxo7eKqp72VOkaT6rMZjn3Qqj56PeqT_7-pJ5OqqQpx_WRf6OZfZeGZSnl8n9PR2EB-ssTb5jXsKyY1anMLQTrZBKtHCYiEkYpVn3n7lTrHOx05oKAOMbJ3mQA93PgQP8-CnVWfIir_cTEJdW0mTbGuLUiRFvkB2UGWYvjEUG_UTFej6/s320/Proyecto%20Pagina%20Erick%201%20.jpeg"
+                    alt="Momentos Épicos"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Momentos Épicos
+                    </h3>
+
+                    <p>
+                        Victorias inolvidables.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="card">
+
+                <img
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0kG-88cRq530RKcc6gzamPYaukHsXcBt3_6Qcv4OcHBJt3sAGFR6ymML6uV8lUO5-PO3H4lDgiBQ2CIpCprf5bY1w48nO6KbLvEBF8LrWRbuBztEMvg8oBU6O32oP5NEYXBa5J1E1SXIQ6s4VJ1wmiiXnilFKuIm_uN_Gs2PxxszHsIlc5YWjhC4xovm6/s320/Proyecto%20Pagina%20Erick%202.jpeg"
+                    alt="Espíritu de Equipo"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Espíritu de Equipo
+                    </h3>
+
+                    <p>
+                        La camaradería que impulsa cada kilómetro.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ESTADÍSTICAS ================= -->
+
+    <section class="stats">
+
+        <h2 class="title">
+            Logros
+        </h2>
+
+        <div class="stats-grid">
+
+
+            <div class="stat-box">
+
+                <h2>69</h2>
+
+                <p>
+                    Competencias
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <h2>9</h2>
+
+                <p>
+                    Victorias
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <h2>3</h2>
+
+                <p>
+                    Podios
+                </p>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <h2>7</h2>
+
+                <p>
+                    Títulos Nacionales
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FRASE ================= -->
+
+    <section class="quote">
+
+        <div class="quote-content">
+
+            <h2>
+                "Cada pedalada cuenta"
+            </h2>
+
+            <p>
+                El ciclismo es esfuerzo, pasión y superación constante.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Legend Cycling — Inspirado en la pasión del ciclismo.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

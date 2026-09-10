@@ -1,0 +1,187 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    background: #ffffff;
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+
+    /* Evitar selección de texto */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.galeria {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+/* =========================================
+   ELEMENTO DE IMAGEN
+========================================= */
+
+.imagen-item {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ENLACE
+========================================= */
+
+.imagen-item a {
+    display: block;
+
+    text-decoration: none;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   IMÁGENES
+========================================= */
+
+.imagen-item img {
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+
+    height: 320px;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+
+    border-radius: 10px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   EFECTO AL PASAR EL RATÓN
+========================================= */
+
+.imagen-item img:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.imagen-item p {
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    color: #222222;
+}
+
+
+/* =========================================
+   MÓVILES
+========================================= */
+
+@media (max-width: 768px) {
+
+    .galeria {
+        padding: 20px 15px;
+
+        gap: 30px;
+    }
+
+    .imagen-item img {
+        width: 100%;
+
+        height: auto;
+
+        max-height: 500px;
+
+        object-fit: contain;
+    }
+
+    .imagen-item p {
+        font-size: 16px;
+
+        padding: 0 10px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .galeria {
+        padding: 15px 10px;
+
+        gap: 25px;
+    }
+
+    .imagen-item img {
+        max-height: 450px;
+
+        border-radius: 6px;
+    }
+
+    .imagen-item p {
+        font-size: 15px;
+    }
+
+}
