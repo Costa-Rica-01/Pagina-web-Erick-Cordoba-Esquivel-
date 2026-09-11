@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-.perfil-ciclista {
+.perfil-ciclista{
     position: relative;
     overflow: hidden;
     border-radius: 12px;
@@ -9,38 +9,39 @@
     color: #fff;
     font-family: Arial, sans-serif;
 
-    /* Capa con gradiente rojo sobre la imagen de fondo */
-    background: 
+    /* Fondo con degradado rojo sobre la imagen */
+    background:
         linear-gradient(
-            rgba(220, 0, 0, 0.75), 
-            rgba(170, 0, 0, 0.85)
-        ), 
-        url("mujer ciclista.webp");
+            rgba(220, 0, 0, 0.82),
+            rgba(170, 0, 0, 0.88)
+        ),
+        url("input_file_0.png");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     box-shadow: 0 10px 28px rgba(140, 0, 0, .50);
 }
 
-.perfil-ciclista h1 {
+.perfil-ciclista h1{
     margin: 0;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 12px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,.85);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .85);
 }
 
-.perfil-ciclista hr {
+.perfil-ciclista hr{
     border: none;
     height: 2px;
     background: rgba(255, 255, 255, .45);
     margin: 18px 0;
 }
 
-.perfil-info {
+.perfil-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,80 +49,87 @@
     gap: 20px;
 }
 
-.perfil-datos {
-    font-size: 22px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,.85);
+.perfil-datos{
+    font-size: 24px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .85);
 }
 
-.perfil-redes {
+.perfil-redes{
     display: flex;
     gap: 12px;
 }
 
-.perfil-redes a {
-    width: 48px;
-    height: 48px;
+.perfil-redes a{
+    width: 52px;
+    height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     color: #fff;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 24px;
     background: rgba(255, 255, 255, .18);
     backdrop-filter: blur(6px);
     transition: .3s;
 }
 
-.perfil-redes a:hover {
+.perfil-redes a:hover{
     background: #fff;
     color: #c00000;
     transform: translateY(-4px) scale(1.1);
 }
 
-@media(max-width: 768px) {
-    .perfil-ciclista {
+@media(max-width: 768px){
+    .perfil-ciclista{
         padding: 25px;
     }
 
-    .perfil-ciclista h1 {
-        font-size: 28px;
-        justify-content: center;
+    .perfil-ciclista h1{
+        font-size: 30px;
     }
 
-    .perfil-info {
-        justify-content: center;
+    .perfil-datos{
+        font-size: 18px;
     }
 }
 </style>
 
 <div class="perfil-ciclista">
+
     <h1>
         Erick Córdoba Esquivel
         <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
              alt="Costa Rica"
-             width="38">
+             width="42">
     </h1>
 
     <hr>
 
     <div class="perfil-info">
+
         <div class="perfil-datos">
             <strong>Ciclista</strong> • Costa Rica
         </div>
 
         <div class="perfil-redes">
-            <a href="https://x.com/EsquivelEr85735" target="_blank" rel="noopener noreferrer">
+
+            <a href="https://x.com/EsquivelEr85735" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank" rel="noopener noreferrer">
+
+            <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://strava.app.link/fchCAI0UrWb" target="_blank" rel="noopener noreferrer">
+
+            <a href="https://strava.app.link/fchCAI0UrWb" target="_blank">
                 <i class="fa-brands fa-strava"></i>
             </a>
+
         </div>
+
     </div>
+
 </div>
 
 <html lang="es">
