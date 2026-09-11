@@ -8,20 +8,16 @@
     padding:35px;
     color:#fff;
     font-family:Arial,sans-serif;
+    background:linear-gradient(rgba(220,0,0,.85), rgba(170,0,0,.88));
+    box-shadow:0 10px 28px rgba(140,0,0,.50);
+}
 
-    /* Fondo ciclistas */
-    background:
-        linear-gradient(
-            rgba(60,0,120,.82),
-            rgba(0,50,150,.88)
-        ),
-        url("https://copilot.microsoft.com/th/id/BCO.e481dc13-be6f-49c4-9878-678b37e35999.png");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    box-shadow:0 10px 28px rgba(0,0,80,.50);
+/* Imagen debajo del encabezado */
+.perfil-ciclista img.fondo-ciclista{
+    width:100%;
+    border-radius:10px;
+    margin-top:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.45);
 }
 
 .perfil-ciclista h1{
@@ -32,6 +28,7 @@
     align-items:center;
     gap:12px;
     text-shadow:2px 2px 8px rgba(0,0,0,.85);
+    color:#ff0000; /* Encabezado rojo */
 }
 
 .perfil-ciclista hr{
@@ -76,24 +73,20 @@
 
 .perfil-redes a:hover{
     background:#fff;
-    color:#3a00a0;
+    color:#c00000;
     transform:translateY(-4px) scale(1.1);
 }
 
 @media(max-width:768px){
-
     .perfil-ciclista{
         padding:25px;
     }
-
     .perfil-ciclista h1{
         font-size:30px;
     }
-
     .perfil-datos{
         font-size:18px;
     }
-
 }
 </style>
 
@@ -119,6 +112,22 @@
             <a href="https://x.com/EsquivelEr85735" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i>
             </a>
+
+            <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://strava.app.link/fchCAI0UrWb" target="_blank">
+                <i class="fa-brands fa-strava"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Imagen ciclista debajo del encabezado -->
+    <img class="fondo-ciclista" src="https://romanialibera.ro/wp-content/uploads/2023/04/Alexandra-Ianculescu-24-819x1024.jpg.webp" alt="Ciclista en ruta">
+</div>
 
 
 <html lang="es">
