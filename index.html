@@ -8,28 +8,19 @@
     padding: 35px;
     color: #fff;
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(220, 0, 0, 0.85), rgba(170, 0, 0, 0.90));
+
+    /* Capa con gradiente rojo sobre la imagen de fondo */
+    background: 
+        linear-gradient(
+            rgba(220, 0, 0, 0.75), 
+            rgba(170, 0, 0, 0.85)
+        ), 
+        url("mujer ciclista.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0 10px 28px rgba(140, 0, 0, .50);
-}
-
-.perfil-contenido {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.foto-encabezado {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    flex-shrink: 0;
-}
-
-.perfil-detalles {
-    flex-grow: 1;
 }
 
 .perfil-ciclista h1 {
@@ -89,9 +80,8 @@
 }
 
 @media(max-width: 768px) {
-    .perfil-contenido {
-        flex-direction: column;
-        text-align: center;
+    .perfil-ciclista {
+        padding: 25px;
     }
 
     .perfil-ciclista h1 {
@@ -102,51 +92,38 @@
     .perfil-info {
         justify-content: center;
     }
-
-    .foto-encabezado {
-        width: 110px;
-        height: 110px;
-    }
 }
 </style>
 
 <div class="perfil-ciclista">
-    <div class="perfil-contenido">
-        
-        <!-- Imagen insertada directamente dentro del encabezado -->
-        <img src="mujer ciclista.webp" alt="Mujer Ciclista" class="foto-encabezado">
+    <h1>
+        Erick Córdoba Esquivel
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
+             alt="Costa Rica"
+             width="38">
+    </h1>
 
-        <div class="perfil-detalles">
-            <h1>
-                Erick Córdoba Esquivel
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Costa_Rica_%28state%29.svg"
-                     alt="Costa Rica"
-                     width="38">
-            </h1>
+    <hr>
 
-            <hr>
-
-            <div class="perfil-info">
-                <div class="perfil-datos">
-                    <strong>Ciclista</strong> • Costa Rica
-                </div>
-
-                <div class="perfil-redes">
-                    <a href="https://x.com/EsquivelEr85735" target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://strava.app.link/fchCAI0UrWb" target="_blank">
-                        <i class="fa-brands fa-strava"></i>
-                    </a>
-                </div>
-            </div>
+    <div class="perfil-info">
+        <div class="perfil-datos">
+            <strong>Ciclista</strong> • Costa Rica
         </div>
 
+        <div class="perfil-redes">
+            <a href="https://x.com/EsquivelEr85735" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/erickesquivel126?igsh=MXc0bGRyamdpbjR6bA==" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://strava.app.link/fchCAI0UrWb" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-strava"></i>
+            </a>
+        </div>
     </div>
 </div>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
